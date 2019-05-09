@@ -1,0 +1,13 @@
+C/C++
+C#
+Debugger for Java
+Debugger for Unity
+Java Dependency Viewer
+Java Extension Pack
+Java Test Runner
+Language Support for Java(TM)
+Maven for Java
+Python
+Visual Studio IntelliCode
+Auto Close Tag
+Auto Rename Tag
