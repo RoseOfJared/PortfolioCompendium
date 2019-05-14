@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dba02637915bc4bab80e90d0314c57, type: 3}
+  m_Name: RPG_Mage
+  m_EditorClassIdentifier: 
+  className: Mage
+  classType: 2
+  healthPoints: 100
+  magicPoints: 150
+  strength: 1
+  speed: 1
+  difficulty: 0
