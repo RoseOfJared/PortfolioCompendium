@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Link: https://forum.unity.com/threads/a-free-simple-smooth-mouselook.73117/
+
 
 public class CameraController : MonoBehaviour
 {
