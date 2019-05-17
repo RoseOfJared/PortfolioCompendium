@@ -35,8 +35,6 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 
-        //sensitivity *= Time.fixedDeltaTime;
-
         // Ensure the cursor is always locked when set
         if(lockCursor)
         {

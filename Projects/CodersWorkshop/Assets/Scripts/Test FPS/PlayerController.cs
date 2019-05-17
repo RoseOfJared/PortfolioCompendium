@@ -60,6 +60,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if(Input.GetButton("Fire1"))
+        {
+            //Fire gun, if one is equipped
+        }
+
         rb.AddForce(new Vector3(0, -gravity * rb.mass, 0));
 
         isGrounded = false;
