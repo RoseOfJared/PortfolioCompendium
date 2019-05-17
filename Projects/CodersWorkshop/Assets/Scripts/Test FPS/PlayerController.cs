@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*  TODO: 
+    Implement Dash Mechanic: 
+
+
+ */
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.0f;
@@ -10,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public float dashDistance = 5.0f;
     public float groundDistance = 0.2f;
     bool canJump = true;
-    public LayerMask Ground;
 
     private Rigidbody rb;
     private Transform trans;
@@ -18,10 +22,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerInput = Vector3.zero;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
         trans= GetComponent<Transform>();
+        //rb.freezeRotation = true;
+        //rb.useGravity = false;
     }
     
     float CalculateJumpVerticalSpeed()
