@@ -8,7 +8,6 @@ public class CollectablePad : MonoBehaviour
     public Vector3 rotationEulers = new Vector3(0, 30, 0);
 
     //This is the object inside the pad we will perform the movements on
-    public GameObject collectablePrefab;
     public GameObject collectableHolder;
     public GameObject collectableObject;
     public GunInfo testGunInfo;
@@ -44,7 +43,7 @@ public class CollectablePad : MonoBehaviour
             //Move gun from collectableHolder to gunHolder
             Debug.Log("Gun acquired");
             Destroy(collectableObject);
-            GameManager.Instance.GiveGun();
+            GameManager.Instance.GiveGun(testGunInfo.CollectablePrefab);
             isTaken = true;
         }
     }

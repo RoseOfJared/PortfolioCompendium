@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
-    public GameObject gunPrefab;
     GameObject player;
     GameObject gunHolder;
 
@@ -35,7 +34,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void GiveGun()
+    public void GiveGun(GameObject gunPrefab)
     {
         //Give the player the gun
         Instantiate(gunPrefab, gunHolder.transform.position, Quaternion.identity, gunHolder.transform);
