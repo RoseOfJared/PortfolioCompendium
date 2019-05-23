@@ -6,21 +6,26 @@ public class CollectablePad : MonoBehaviour
 {
     public float height = 2f;
     public Vector3 rotationEulers = new Vector3(0, 30, 0);
+    public float respawnDelay = 5.0f;
 
     //This is the object inside the pad we will perform the movements on
     public GameObject collectableHolder;
-    public GameObject collectableObject;
-    public GunInfo testGunInfo;
+    private GameObject collectableObject;
+    public Collectable collectable;
     private Vector3 _startingPosition;
     private bool isTaken = false;
 
     private void Start() {
-        if(testGunInfo)
+        if(collectable)
         {
-            //testGunInfo.DebugGunInfo(); 
-            collectableObject = Instantiate(testGunInfo.CollectablePrefab, collectableHolder.transform.position, Quaternion.identity);
+            collectableObject = Instantiate(collectable.CollectablePrefab, collectableHolder.transform.position, Quaternion.identity);
             _startingPosition = collectableHolder.transform.position; 
         }     
+    }
+
+    public void Init(Collectable collect)
+    {
+        collectable = collect;
     }
 
     // Update is called once per frame
@@ -43,8 +48,17 @@ public class CollectablePad : MonoBehaviour
             //Move gun from collectableHolder to gunHolder
             Debug.Log("Gun acquired");
             Destroy(collectableObject);
-            GameManager.Instance.GiveGun(testGunInfo.CollectablePrefab);
+            //TODO: Make collectable acquisition more generic
+            GameManager.Instance.GiveGun(collectable.CollectablePrefab, collectable);
             isTaken = true;
+            Invoke("SpawnCollectable", respawnDelay);
         }
+    }
+
+    void SpawnCollectable()
+    {
+        collectableObject = Instantiate(collectable.CollectablePrefab, collectableHolder.transform.position, Quaternion.identity);
+        _startingPosition = collectableHolder.transform.position; 
+        isTaken = false;
     }
 }

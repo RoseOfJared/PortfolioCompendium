@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f1cb9530526f4183e54e363b45475, type: 3}
   m_Name: BadGun_ModeTwo
   m_EditorClassIdentifier: 
+  collectablePrefab: {fileID: 6659909389606555802, guid: a0eff8af184094e498cac65fef193646,
+    type: 3}
   gunName: Bad Gun Mode Two
-  damage: 0
-  fireRate: 0
-  magazineSize: 0
-  reserveAmmo: 0
-  reloadSpeed: 0
+  damage: 15
+  fireRate: 2
+  magazineSize: 13
+  reserveAmmo: 40
+  reloadSpeed: 4
+  ammoRarity: 1

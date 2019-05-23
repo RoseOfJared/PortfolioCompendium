@@ -65,6 +65,11 @@ public class PlayerController : MonoBehaviour
             //Fire gun, if one is equipped
         }
 
+        //if(Input.GetButton("Reload"))
+        //{
+            //if gun is not full, reload it
+        //}
+
         rb.AddForce(new Vector3(0, -gravity * rb.mass, 0));
 
         isGrounded = false;

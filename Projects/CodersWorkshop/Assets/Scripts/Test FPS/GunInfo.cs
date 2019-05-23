@@ -19,7 +19,41 @@ public class GunInfo : Collectable
     private int reserveAmmo = 0;
     [SerializeField]
     private float reloadSpeed = 0;
+    [SerializeField]
+    private AmmoRarityType ammoRarity = AmmoRarityType.Common;
 
+    #region public getters
+
+    public string GunName
+    {
+        get{return gunName;}
+    }
+    public int Damage
+    {
+        get{return damage;}
+    }
+    public float FireRate
+    {
+        get{return fireRate;}
+    }
+    public int MagazineSize
+    {
+        get{return magazineSize;}
+    }
+    public int ReserveAmmo
+    {
+        get{return reserveAmmo;}
+    }
+    public float ReloadSpeed
+    {
+        get{return reloadSpeed;}
+    }
+    public AmmoRarityType AmmoRarity
+    {
+        get{return ammoRarity;}
+    }
+
+    #endregion
     //Purely to make sure everything is up to board
     public void DebugGunInfo()
     {
@@ -29,5 +63,14 @@ public class GunInfo : Collectable
         Debug.Log("magazineSize: " + magazineSize.ToString());
         Debug.Log("Reserve Ammo: " + reserveAmmo.ToString());
         Debug.Log("Reload Speed: " + reloadSpeed.ToString());
+        Debug.Log("Ammo Rarity: " + ammoRarity.ToString());
     }
+}
+
+public enum AmmoRarityType
+{
+    Common,
+    Uncommon,
+    Rare,
+    Scarce
 }

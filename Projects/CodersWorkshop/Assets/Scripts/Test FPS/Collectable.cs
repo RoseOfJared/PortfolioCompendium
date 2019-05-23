@@ -8,11 +8,22 @@ public class Collectable : ScriptableObject
     [Header("Collectable Variables")]
     [SerializeField]
     private GameObject collectablePrefab = null;
+    [SerializeField]
+    private CollectableType type = CollectableType.None;
 
     public GameObject CollectablePrefab
     { 
-        get {
-            return collectablePrefab;
-            }
+        get { return collectablePrefab; }
     }
+
+    public CollectableType Type{
+        get{return type;}
+    }
+}
+
+public enum CollectableType
+{
+    Gun,
+    Coin,
+    None
 }
